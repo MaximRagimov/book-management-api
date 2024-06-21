@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "testUser",
+    "password": "testPassword",
+    "database": "book_management_db",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}

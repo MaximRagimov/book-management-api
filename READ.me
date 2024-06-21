@@ -1,0 +1,76 @@
+# Book Management API
+
+A RESTful API for managing a collection of books, including user registration, authentication, and role management.
+
+## Features
+
+- Add, update, view, and delete books
+- User registration and authentication
+- Role-based access control using JWT
+- Email verification
+
+## Technologies
+
+- Node.js
+- Express.js
+- PostgreSQL
+- Sequelize
+- JWT
+- Nodemailer
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+- PostgreSQL
+
+### Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/book-management-api.git
+    cd book-management-api
+    ```
+
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+3. Create a `.env` file with the following content:
+    ```
+    PORT=3000
+    DB_NAME=book_management_db
+    DB_USER=your_username
+    DB_PASS=your_password
+    DB_HOST=localhost
+    JWT_SECRET=your_jwt_secret
+    EMAIL=your_email@gmail.com
+    EMAIL_PASSWORD=your_email_password
+    CLIENT_URL=http://localhost:3000
+    ```
+
+4. Start the server:
+    ```bash
+    npm start
+    ```
+
+5. The server will run on `http://localhost:3000`.
+
+### API Endpoints
+
+- `POST /users/register` - Register a new user
+- `POST /users/login` - User login
+- `GET /users/me` - Get current user information (requires authentication)
+- `PUT /users/:id/role` - Update user role (requires authentication and admin role)
+
+- `POST /books` - Add a new book (requires authentication and admin role)
+- `GET /books` - Get list of all books
+- `GET /books/:id` - Get book by ID
+- `PUT /books/:id` - Update book information (requires authentication and admin role)
+- `DELETE /books/:id` - Delete book (requires authentication and admin role)
+
+## License
+
+This project is licensed under the MIT License.
